@@ -1,0 +1,84 @@
+@font-face {
+  font-family: Helvetica;
+  src: url(helvetica-255/Helvetica.ttf);
+}
+
+@font-face {
+  font-family: Helvetica;
+  src: url(helvetica-255/Helvetica-Bold.ttf);
+  font-weight: bold;
+}
+
+html {
+  font-size: calc(100vh / 45);
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1.5rem;
+  background: #FF3000;
+  color: #000;
+  font: 1rem/1.1 Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  margin: 0 0 2.5rem;
+  font-size: min(9.5rem, (100vw - 3rem) / 8);
+  line-height: .8;
+  letter-spacing: -.05em;
+}
+
+main {
+  display: grid;
+  width: min(100%, 60rem);
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+img {
+  width: 100%;
+  align-self: end;
+  margin-bottom: -1.5rem;
+  filter: grayscale(1) brightness(5) contrast(3);
+  mix-blend-mode: multiply;
+}
+
+h2 {
+  margin: 0 0 .5rem;
+  padding-top: .25rem;
+  border-top: .15rem solid;
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1em;
+  list-style: square;
+}
+
+li + li {
+  margin-top: .25rem;
+}
+
+@media (orientation: portrait) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    order: 1;
+  }
+}
