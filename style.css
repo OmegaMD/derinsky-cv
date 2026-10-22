@@ -37,7 +37,7 @@ main {
   width: min(100%, 60rem);
   margin: 0 auto;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 3rem;
 }
 
 div {
@@ -71,6 +71,19 @@ ul {
 
 li + li {
   margin-top: .25rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FFF;
+}
+
+a:active {
+  color: #FF3000;
 }
 
 @media (orientation: portrait) {
